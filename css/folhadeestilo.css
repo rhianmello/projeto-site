@@ -3,8 +3,8 @@ folhadeestilo.css
 *{margin: 0; padding: 0;}
 header{
     width: 100%;/*largura*/
-    padding: 0;/*altura*/
-    height: auto;/*margem*/
+    padding: 0;/*distãncia da margem da borda*/
+    height: auto;/*altura*/
     background: black;/*cor de fundo menu*/
     margin-left: -8px;
     position: fixed;
