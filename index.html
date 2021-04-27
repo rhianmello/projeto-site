@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<title>JC News</title>
 		<link rel="stylesheet" type="text/css" href="css/folhadeestilo.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link rel="icon"  href="img/icone.png">
 	</head>
-
 	<body>
-	<header >
-		<div class="logo">
-			<h1>Catarinão</h1>
-		</div>
-		
-			<nav class="menu">
-							
+		<header class="cabecalho">
+			<a href="index.html"><h1 class="logo"></h1></a>
+				<button class="btn-menu"> <i class="fas fa-align-justify"></i></button>
+					<nav class="menu">
+						<a class="btn-close"><i class="fas fa-times"></i></a>
 							<ul>
-								<li><a href="index.html">Home                             	   </a></li>
-								<li><a href="serviços.html">Serviços                           </a>
-									<ul class="submenu">	<li><a href="serviços.html">Babá   </a></li>
-											<li><a href="#serviços.html">informática   		   </a></li>
-											<li><a href="#serviços.html">Festas Eventos        </a></li>
-											<li><a href="#serviços.html">Profissionais liberais</a></li>
-											<li><a href="#">Roupas               			   </a></li>
-											<li><a href="#">Reformas Reparos    		       </a></li>
-											<li><a href="#">Saúde e Beleza        			   </a></li>
-											<li><a href="#">Serviços domésticos   			   </a></li>
-											<li><a href="#">Transporte Mudanças 			   </a></li>
-											<li><a href="#">Turismo               			   </a></li>
-											<li><a href="#">Outros               		 	   </a></li>
-																							   </ul></li>
-									<li><a href="entretenimento.html">Entretenimento 		   </a></li>
-									<li><a href="sobre.html">Sobre                    		   </a></li>
-									<li><a href="contato.html">Contato 				           </a></li>
-
-		</ul>
-
-	</nav>
-		<hr class="hrmenu">
-					
-	</header>
-<section>
-
-</section>
-    
- 
-</body>
+                				<li><a href="index.html">Home</a></li>
+                				<li><a href="serviços.html">Serviços</a></li>
+                        		<li><a href="entretenimento.html">Entretenimento</a></li>
+        		        		<li><a href="sobre.html">Sobre</a></li>
+                				<li><a href="contato.html">Contato</a></li>
+            				</ul>
+           			</nav>
+   		</header> 
+    <main class="container" id="containerindex">
+		<article class="servicoindex">
+			<a href="#"><img src="img/motofumaça.jpg" alt="motos"></a>
+				<div class="inner" id="innerindex">
+					 <a href="#">Sanitização nos bairros de São Gonçalo</a>
+						<h4>Jardim Catarina contra o Covid</h4>
+							<p>Snitização contra a proliferação do coronavírus,
+  							   faz a Vigilância em Saúde Ambiental, pulverizar 
+							   com inseticida para matar o mosquito Aedes aegypti, 
+							   transmissor das arboviroses dengue, zika e chikungunya.</p>
+				</div>
+			</article>
+	</main> 
+ 		<!--Newsletter-->
+   		<section class="newsletter">
+		    <h2>Incresva-se agora!</h2>
+			 	<h3>Receba novidades, dicas e muito mais.</h3>
+				 	<form>
+						<input type="email" name="email" placeholder="Seu email">
+				 		<button>Cadastrar</button>
+					</form>
+		</section>
+		 <!--Rodapé-->
+		    <footer class="rodape bg-gradient">
+				<div class="social-icons">
+					<a href="https://www.facebook.com/rhian.mello"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com/RhianMello"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.google.com/"><i class="fab fa-google"></i></a>
+					<a href="https://www.instagram.com/rhianmello_/"><i class="fab fa-instagram"></i></a>
+					<a href="mailto:rhian.udm@gmail.com"><i class="fa fa-envelope"></i></a>
+					<p class="copyright"><b>© Copyright 2021 Rhian Mello - Todos os direitos reservados.</b></p>
+				</div>
+			</footer>
+	 	<!--Jquery-->
+	 	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	 		<script>
+				$(".btn-menu").click(function(){$(".menu").fadeIn();});
+				$(".btn-close").click(function(){$(".menu").fadeOut();});
+	 	</script>
+	</body>
 </html>
+	
+	
+	
