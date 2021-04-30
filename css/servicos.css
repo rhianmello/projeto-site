@@ -15,7 +15,8 @@ body {
     background-size: cover;
     background-position: center;}
 ul{ list-style: none}
-a{  text-decoration: none; }
+a{  text-decoration: none;
+    font-style: italic; }
 img{max-width: 100%;}
 /*ícone da página*/
 .icone{
@@ -178,7 +179,7 @@ img{max-width: 100%;}
     background-color: black;}
 
 .social-icons a{
-    font-size: 3em;
+    font-size: 2em;
     color: red;
     cursor: pointer;}
 /*celulares pequenos*/

@@ -15,7 +15,8 @@ body {
     background-size: cover;
     background-position: center;}
 ul{ list-style: none}
-a{  text-decoration: none; }
+a{  text-decoration: none;
+    font-style: italic; }
 img{max-width: 100%;}
 /*ícone da página*/
 .icone{
@@ -101,55 +102,59 @@ img{max-width: 100%;}
     padding:80px 0 0 0;
     text-shadow:20px 20px 20px #fff;
 }
-/*Sobre*/
-.container{
+/*contato*/
+.contato{
     width: 100%;
     margin-top: 0;
+    ;
 }
-.sobre{
-    width: auto;
-    min-height:auto;
+.contato{
+    width:100%;
+    height: auto;
+    margin:auto;
+    text-align: center ;
     margin-bottom: 2%;
     border-radius: 10px;
     border: 2px solid black;
     border-color: rgb(20, 21, 24);
     box-shadow:2px 2px 25px 10px rgb(4, 0, 255);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;}
-.sobre img {
-    width: auto ; 
-    height: auto; 
+    align-items: center;
+    justify-content: center;}
+.contato img {
+    width: 190px ; 
+    height: 130px; 
     object-fit: cover;
     margin:1% 1% 1% 0%; 
     border-radius: 7px 7px 7px 7px;
     box-shadow:5px 5px 25px 5px rgb(255, 60, 0) }
-.sobreinner {
-    text-align:center;}
-.sobreinner a{
-    font-size: 2em;
+.contatoinner {
+   text-align: center ;}
+.contatoinner a{
+    font-size: 20px;
     color:rgb(246, 230, 2);
     text-shadow:1px 3px 3px rgb(3, 3, 3); 
     font-weight: 700;
     margin: 2px;}
-.sobreinner p{
-    font-size: 30px;
+.contatoinner p{
+    font-size: 15px;
     margin-top: 1%;
     color:#ffffff;
     text-shadow:1px 3px 3px rgb(3, 3, 3);    
     font-weight: 700;
-    text-align: left;
+    text-align: center;
     margin-bottom: 0;}
 /*Newsletter*/
-.section{width: auto;height: auto;}
+.section{width: 100%;height: 100%;}
 .newsletter {
     width: 100%; 
+    height: auto;
     border: 2px solid black; 
     float: left; 
     text-align: center;
     margin-left: -5%; 
     padding: 0 4%; 
-    text-align: center;margin-bottom:-10% ;
+    text-align: center;/*margin-bottom:-10% ;*/
     background-color: black;} 
 .newsletter h2{
     font-size: 1.5em;
@@ -165,10 +170,10 @@ img{max-width: 100%;}
     padding: 1%;
     border-radius: 100px;}
 .newsletter button{
-    width:1%;
+    width:auto;
     font-size: 10px; 
     background-color: #ada7a6;
-    color:rgb(189, 51, 51); 
+    color:rgb(0, 0, 0); 
     border: 1.5mm ridge rgba(0, 0, 255.13); 
     padding: 1%; 
     border-radius: 100px; 
@@ -184,13 +189,14 @@ img{max-width: 100%;}
     background-color: black;}
 
 .social-icons a{
-    font-size: 3em;
+    font-size: 1em;
     color: red;
     cursor: pointer;}
 /*celulares pequenos*/
 @media screen and (min-width: 280px) {
-    .sobre img{width: auto;height: auto;}
-    .container{text-align: center;}
+    .contato img{width: auto;height: auto;}
+    .contatoinner a{font-size: 30px}
+    .contatoinner p{font-size: 20px}
 }
 @media screen and (min-width: 320px) {
 
@@ -201,10 +207,12 @@ img{max-width: 100%;}
 }
 
 @media screen and (min-width: 380px) {
-   
+    
     .logo {width: 120px; background: url("../img/logo.png") center center/120px no-repeat ;}
     .btn {font-size: 2em;}
     .newsletter button{font-size: 13px}
+    .social-icons a{
+        font-size: 2em;}
 }
 @media screen and (min-width: 430px) {
    
@@ -214,10 +222,14 @@ img{max-width: 100%;}
 }            
 /*celulares e tablets menores*/
 @media screen and (min-width: 450px) {
- 
+    .newsletter h2{font-size: 2.5em;}
+    .newsletter h3{font-size: 1.5em;}
 }
 @media screen and (min-width: 500px) {
-
+    .contato{float: left;}
+    .contatoinner{text-align: center;}
+    .contatoinner a{font-size: 50px;}
+    .contatoinner p{font-size: 30px;}
     .btn-close{margin: 15px;}
 }
 @media screen and (min-width: 550px) {
@@ -225,28 +237,20 @@ img{max-width: 100%;}
     
 }
 @media screen and (min-width: 630px) {  
-    
-
-}
-@media screen and (min-width: 670px) {
-  
+    .contatoinner {text-align: center;}
 
 }
   _  
 /*dispositivos médios*/
  @media screen and (min-width: 768px) {
-    .container{margin-top: 0%;}
-    .sobre{width: 90%;float:center;}
+    
     .newsletter h2{font-size: 2.5em;}
     .newsletter h3{font-size: 1.5em;}
-    .newsletter input{font-size: 30px; margin-left: 5px;}
-    .newsletter button{width:29%;padding: 2%; float: right; margin-top: 0;font-size: 30px; margin-block-end: 10%;}
-    
-    
 }
 /*dispositivos grandes*/
 @media screen and (min-width: 1044px) {
-    .sobre img{float: left;}
+   
+    .contato img{height: 400px; width: 400px;}
     .logo{width: 120px; height: 60px; margin-right: 50px; margin-top: 10px; float: right; background: url("../img/logo.png") right center/120px no-repeat; font-size: 0;}
     .btn-menu{display: none;}
     .btn-close{display: none;}
@@ -255,11 +259,6 @@ img{max-width: 100%;}
     .menu li{ float: left;}
     .menu li a{color: rgb(255, 255, 255);font-size: 20px;padding: 5px;}
     .menu li a:hover{color: rgb(255, 255, 255);}
-    .container{margin-top: 10%;}
-    .sobre {width: auto; float: left;}
-    .container{margin-top: 0%;}
     .newsletter h2{font-size: 2.5em;}
     .newsletter h3{font-size: 1.5em;}
-    .newsletter input{font-size: 30px; margin-left: 5px;}
-    .newsletter button{width:29%;padding: 1% ; float: center; margin-top: 0;font-size: 30px; margin-block-end: 11%;}
 }     

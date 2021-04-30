@@ -15,7 +15,8 @@ body {
     background-size: cover;
     background-position: center;}
 ul{ list-style: none}
-a{  text-decoration: none; }
+a{  text-decoration: none;
+    font-style: italic; }
 img{max-width: 100%;}
 /*ícone da página*/
 .icone{
@@ -114,6 +115,7 @@ img{max-width: 100%;}
     border: 2px solid black;
     border-color: rgb(20, 21, 24);
     box-shadow:2px 2px 25px 10px rgb(4, 0, 255);
+    background-color: rgb(182, 170, 141);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;}
@@ -133,12 +135,12 @@ img{max-width: 100%;}
     font-weight: 700;
     margin: 2px;}
 .sobreinner p{
-    font-size: 30px;
+    font-size: 1em;
     margin-top: 1%;
-    color:#ffffff;
-    text-shadow:1px 3px 3px rgb(3, 3, 3);    
+    color:#000000;
     font-weight: 700;
     text-align: left;
+    margin-left: 10px;
     margin-bottom: 0;}
 /*Newsletter*/
 .section{width: auto;height: auto;}
@@ -247,6 +249,7 @@ img{max-width: 100%;}
 /*dispositivos grandes*/
 @media screen and (min-width: 1044px) {
     .sobre img{float: left;}
+    .sobre {width: auto; float: left;}
     .logo{width: 120px; height: 60px; margin-right: 50px; margin-top: 10px; float: right; background: url("../img/logo.png") right center/120px no-repeat; font-size: 0;}
     .btn-menu{display: none;}
     .btn-close{display: none;}
@@ -255,11 +258,7 @@ img{max-width: 100%;}
     .menu li{ float: left;}
     .menu li a{color: rgb(255, 255, 255);font-size: 20px;padding: 5px;}
     .menu li a:hover{color: rgb(255, 255, 255);}
-    .container{margin-top: 10%;}
-    .sobre {width: auto; float: left;}
-    .container{margin-top: 0%;}
     .newsletter h2{font-size: 2.5em;}
     .newsletter h3{font-size: 1.5em;}
-    .newsletter input{font-size: 30px; margin-left: 5px;}
-    .newsletter button{width:29%;padding: 1% ; float: center; margin-top: 0;font-size: 30px; margin-block-end: 11%;}
+    
 }     
