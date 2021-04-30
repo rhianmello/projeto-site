@@ -8,6 +8,7 @@ folhadeestilo.css
     font-weight: 300; 
     box-sizing: border-box; 
     font-family: 'Lato', sans-serif;}
+    
 body { 
     background-image: url(../img/fundo.jpg); 
     background-repeat: no-repeat; 
@@ -55,7 +56,7 @@ img{max-width: 100%;}
     box-shadow:5px 5px 25px 2px rgb(4, 0, 255);}
 /*Menu*/
 
-.menu{
+.menu{ 
     box-shadow:5px 10px 25px 10px rgb(4, 0, 255);
     display:none;
     width:100%; 
@@ -65,7 +66,6 @@ img{max-width: 100%;}
     top:0;
     left: 0;
     margin-bottom: 1%;
-    
     }
 .btn-close{
     font-size: 1.5em; 
@@ -92,63 +92,81 @@ img{max-width: 100%;}
         border-radius: 10px;}
 
 /*.menu ul ul {display: none;} sumir com submenu*/
-/*Título*/
-.titulo h1{
-    width: 102%;
-    text-align: center;
-    font-size: 50px;
-    margin:0; 
-    padding:80px 0 0 0;
-    text-shadow:20px 20px 20px #fff;
-}
-/*noticias*/
+
+/*Serviços*/
 .container{
-    width: 100%;
-    margin-top: 0;
-    
-}
-.homenoticias{
-    width: 90%;
-    margin:auto;
-    float: center;
-    margin-bottom: 2%;
-    border-radius: 10px;
-    border: 2px solid black;
-    border-color: rgb(20, 21, 24);
-    box-shadow:2px 2px 25px 10px rgb(4, 0, 255);
+    width: 100%; 
+    float: left;
+    padding:0;
+    margin-top: 2%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;}
-.homenoticias img {
-    float:center;
-    width: 190px; 
-    height: 190px; 
-    object-fit: cover;
-    margin:1% 1% 1% 1%; 
-    border-radius: 7px 7px 7px 7px;
-    box-shadow:5px 5px 25px 5px rgb(255, 60, 0)   
-}   
-.homenoticiasinner{
+.servico{
+    width: 300px;
+    float:center; 
+    border: 1px solid black;
+    box-shadow:2px 2px 25px 2px rgb(4, 0, 255); 
+    text-align: center; 
+    border-radius: 7px; 
+    margin-bottom: 3%;
+    margin-top: 3%;
+    margin-left: 1px;}
+.servico img {
+    border-radius: 7px 7px 0 0;
+    margin:3% 0% -1% -1%;
+    max-width: 100%; 
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover;}
+.inner {
+    padding: 5%;
     text-align:center;}
-.homenoticiasinner a{
-    font-size: 2em;
-    color:rgb(255, 255, 255);
-    text-shadow:1px 3px 3px rgb(3, 3, 3); 
+.inner a{
+    font-size: 3em;
+    color:rgb(255, 255, 255); 
+    text-shadow:1px 3px 3px rgb(0, 0, 0); 
+    font-weight: 700;}
+.inner p{
+    font-size: 1.8em;
+    margin-top: 2%;
+    color:rgb(255, 217, 0); 
+    text-shadow:1px 3px 3px rgb(0, 0, 0); 
     font-weight: 700;
-    margin: 2px;}
-.homenoticiasinner h4{
-    font-size: 2em;
-    color:rgb(0, 0, 0); 
-    text-shadow:1px 3px 3px rgb(255, 255, 255); 
-    margin: 0;}
-.homenoticiasinner p{
-    font-size: 30px;
-    margin-top: 1%;
-    color:#ffffff;
-    text-shadow:1px 3px 3px rgb(3, 3, 3);    
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: 0;}
+    text-align: left;}
+/*Newsletter*/
+.section{width: auto;height: auto;}
+.newsletter {
+    width: 100%; 
+    border: 2px solid black; 
+    float: left; 
+    text-align: center;
+    margin-left: -5%; 
+    padding: 0 4%; 
+    text-align: center;margin-bottom:-10% ;
+    background-color: black;} 
+.newsletter h2{
+    font-size: 1.5em;
+    color:rgb(253, 249, 249);
+    font-weight: 700;}
+.newsletter h3{color:rgb(253, 249, 249); }
+.newsletter form{margin-top:0;}
+.newsletter input{
+    width:40%; 
+    font-size: 20px; 
+    background-color: #ada7a6;color:rgb(4, 0, 255); 
+    border: 1.5mm ridge rgba(0, 0, 255.13); 
+    padding: 1%;
+    border-radius: 100px;}
+.newsletter button{
+    width:1%;
+    font-size: 10px; 
+    background-color: #ada7a6;
+    color:rgb(189, 51, 51); 
+    border: 1.5mm ridge rgba(0, 0, 255.13); 
+    padding: 1%; 
+    border-radius: 100px; 
+    cursor: pointer;}
 /*Rodapé*/
 .rodape{
     width:100%;
@@ -163,54 +181,88 @@ img{max-width: 100%;}
     font-size: 3em;
     color: red;
     cursor: pointer;}
-
 /*celulares pequenos*/
 @media screen and (min-width: 260px) {
     .homenoticias{margin-top: 25%;text-align: center;width: 100%;}
-    .homenoticias img{width:90%;height: auto;}
     .homenoticiasinner{text-align: center;}
+    .container{margin-top: 30%;}
+   
 }   
 @media screen and (min-width: 320px) {
+
+    .container{margin-top: 25%}
     .homenoticias{margin-top: 25%; float: center;text-align: center;}
     .homenoticiasinner{text-align: center;}
     .homenoticiasinner{float: center;}
     .logo {width: 120px;background: url("../img/logo.png") center center/120px no-repeat ;}
     .btn {font-size: 2em;}
+    .newsletter button{font-size: 10px} 
 }
+
 @media screen and (min-width: 380px) {
+    .container{margin-top: 18%}
     .homenoticias{margin-top: 18%;float: center;text-align: center;}
     .homenoticiasinner{text-align: center;}
     .logo {width: 120px; background: url("../img/logo.png") center center/120px no-repeat ;}
     .btn {font-size: 2em;}
+    .newsletter button{font-size: 13px}
 }
 @media screen and (min-width: 430px) {
+    .container{margin-top: 14%}
     .homenoticias{margin-top: 15%;float: center;text-align: center;}
     .homenoticiasinner{text-align: center;}
     .logo {width: 120px; background: url("../img/logo.png") center center/120px no-repeat ;}
     .btn {font-size: 2em;}
+    .newsletter button{font-size: 17px}
 }            
 /*celulares e tablets menores*/
+@media screen and (min-width: 450px) {
 
+}
 @media screen and (min-width: 500px) {
+    
+    .container{margin-top: 13%;}
     .homenoticias{margin-top: 13%;}
     .homenoticiasinner{text-align: center;}
+    
+    .servico {width: 48%; float: left; margin-right: 1%;}
     .btn-close{margin: 15px;}
 }
 @media screen and (min-width: 550px) {
+    .container{margin-top: 10%;}
     .homenoticias{margin-top: 10%;}
 }
+@media screen and (min-width: 630px) {  
+    
+
+}
 @media screen and (min-width: 670px) {
+    .container{margin-top: 8%;}
     .homenoticias{width: 90%;margin-top: 0%;float:center;}
     .homenoticiasinner{float:center;}
     .homenoticiasinner h4{padding-top: 5px;margin-right: 10%;}
     .homenoticiasinner a{padding-top: 5px;margin-right: 10%;}
     .homenoticias img{width:30%;height: 250px;float: left;}
 }
- 
+  _  
 /*dispositivos médios*/
-@media screen and (min-width: 768px) {
-    .homenoticias{width: 90%;margin-top: 2%;float:center;}
+ @media screen and (min-width: 768px) {
+
+    .homenoticias{width: 90%;margin-top:9%;float:center;}
     .homenoticiasinner{float:center;}
+    .servico{width: 49%;margin-top: 1px; float: left; margin-right: 0%;}
+    .servico:nth-child(2){margin-right: 0;}
+    .servico:nth-child(3){margin-right: 0; }
+    .servico:nth-child(4){margin-right: 0; }
+    .servico:nth-child(5){margin-right: 0; }
+    .servico:nth-child(6){margin-right: 0; }
+    .newsletter h2{font-size: 2.5em;}
+    .newsletter h3{font-size: 1.5em;}
+    .newsletter input{font-size: 30px; margin-left: 5px;}
+    .newsletter button{width:29%;padding: 2%; float: right; margin-top: 0;font-size: 30px; margin-block-end: 10%;}
+    .container{margin-top: 5%;}
+    
+    
 }
 /*dispositivos grandes*/
 @media screen and (min-width: 1044px) {
@@ -222,9 +274,10 @@ img{max-width: 100%;}
     .menu li{ float: left;}
     .menu li a{color: rgb(255, 255, 255);font-size: 20px;padding: 5px;}
     .menu li a:hover{color: rgb(255, 255, 255);}
+    .container{margin-top: 10%;}
+    .servico {width: 33%;margin-top: -20px; float: left; margin-right: 0%;}
     .newsletter h2{font-size: 2.5em;}
     .newsletter h3{font-size: 1.5em;}
     .newsletter input{font-size: 30px; margin-left: 5px;}
     .newsletter button{width:29%;padding: 1% ; float: center; margin-top: 0;font-size: 30px; margin-block-end: 11%;}
-}
-                
+}     
