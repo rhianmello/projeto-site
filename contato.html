@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<title>JC News</title>
-		<link rel="stylesheet" type="text/css" href="css/folhadeestilo.css">
-
+		<link rel="stylesheet" type="text/css" href="css/contato.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link rel="icon"  href="img/icone.png">
 	</head>
-<body>
-<nav class="menu">
-			<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="serviços.html">Serviços</a>
-				<ul>
-					<li><a href="#serviços.html">Babá                  </a></li>
-					<li><a href="#serviços.html">informática   		   </a></li>
-					<li><a href="#serviços.html">Festas e Eventos      </a></li>
-					<li><a href="#serviços.html">Profissionais liberais</a></li>
-					<li><a href="#">Roupas                </a></li>
-					<li><a href="#">Reformas e Reparos    </a></li>
-					<li><a href="#">Saúde e Beleza        </a></li>
-					<li><a href="#">Serviços domésticos   </a></li>
-					<li><a href="#">Transporte e Mudanças </a></li>
-					<li><a href="#">Turismo               </a></li>
-					<li><a href="#">Outros                </a></li>
-				                                          </ul></li>
-			<li><a href="entretenimento.html">Entretenimento  </a></li>
-			<li><a href="sobre.html">sobre                    </a></li>
-			<li><a href="contato.html">Contato 				  </a></li>
-		</ul>
-	</nav>
-</body>
+	<body>
+		<header class="cabecalho">
+			<a href="index.html"><h1 class="logo"></h1></a>
+				<button class="btn-menu"> <i class="fas fa-align-justify"></i></button>
+					<nav class="menu">
+						<a class="btn-close"><i class="fas fa-times"></i></a>
+							<ul>
+                				<li><a href="index.html">Home</a></li>
+                				<li><a href="serviços.html">Serviços</a></li>
+        		        		<li><a href="sobre.html">Sobre</a></li>
+                				<li><a href="contato.html">Contato</a></li>
+            				</ul>
+           			</nav>
+   		</header> 
+		   <article class="titulo">
+			<h1>Catarina ON</h1>
+		</article>
+		<article class="contato">
+			<section>
+				<a href="#"><img src="img/outros.jpg" alt="pessoa"></a>
+					<div class="contatoinner">
+						
+						 <a href="#">Fale conosoco</a>
+								<p>
+									Responderemos em breve!
+								</p>
+					</div>
+				</section>
+			</article>
+		
+ 		<!--Newsletter-->
+   		<section class="newsletter">
+		    <h2>Incresva-se agora!</h2>
+			 	<h3>Receba novidades, dicas e muito mais.</h3>
+				 	<form>
+						<input type="email" name="email" placeholder="Seu email">
+				 		<button>Cadastrar</button>
+					</form>
+		</section>
+		 <!--Rodapé-->
+		    <footer class="rodape bg-gradient">
+				<div class="social-icons">
+					<a href="https://www.facebook.com/rhian.mello"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com/RhianMello"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.google.com/"><i class="fab fa-google"></i></a>
+					<a href="https://www.instagram.com/rhianmello_/"><i class="fab fa-instagram"></i></a>
+					<a href="mailto:rhian.udm@gmail.com"><i class="fa fa-envelope"></i></a>
+					<p class="copyright"><b>© Copyright 2021 Rhian Mello - Todos os direitos reservados.</b></p>
+				</div>
+			</footer>
+	 	<!--Jquery-->
+	 	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	 		<script>
+				$(".btn-menu").click(function(){$(".menu").fadeIn();});
+				$(".btn-close").click(function(){$(".menu").fadeOut();});
+	 	</script>
+	</body>
 </html>
+	
+	
+	

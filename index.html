@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 	<head>
 		<meta charset="utf-8"/>
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 		<title>JC News</title>
-		<link rel="icon"  href="img/icone.png">
 		<link rel="stylesheet" type="text/css" href="css/folhadeestilo.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		<link rel="icon"  href="img/icone.png">
 	</head>
-
 	<body>
 		<header class="cabecalho">
-			<a href="index.html"><h1 class="logo"></h1></a>
-			<button class="btn-menu"> <i class="fas fa-align-justify"></i></button>
-				<nav class="menu">
-					<a class="btn-close"><i class="fas fa-times"></i></a>
-					<ul>
-                		<li><a href="index.html">Home</a></li>
-                		<li><a href="serviços.html">Serviços</a></li>
-                	<!--<ul><li><a href="#serviços.html">Profissionais liberais</a></li></ul>-->
-                		<li><a href="entretenimento.html">Entretenimento</a></li>
-                		<li><a href="sobre.html">Sobre</a></li>
-                		<li><a href="contato.html">Contato</a></li>
-            		</ul>
-           		</nav>
+			<a href="noticias.html"><h1 class="logo"></h1></a>
+				<button class="btn-menu"> <i class="fas fa-align-justify"></i></button>
+					<nav class="menu">
+						<a class="btn-close"><i class="fas fa-times"></i></a>
+							<ul>
+                				<li><a href="noticias.html">Home</a></li>
+                				<li><a href="serviços.html">Serviços</a></li>
+        		        		<li><a href="sobre.html">Sobre</a></li>
+                				<li><a href="contato.html">Contato</a></li>
+            				</ul>
+           			</nav>
    		</header> 
-	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-	<script >
+    <main class="container">
+		<article class="titulo">
+			<h1>Catarina ON</h1>
+		</article>
+		<article class="homenoticias">
+			<section>
+				<a href="#"><img src="img/arthur.jpg" alt="pessoas"></a>
+					<div class="homenoticiasinner">
+						 <a href="#">Roda de Samba com Arthurzinho</a>
+								<p>Para quem gosta de um bom pagode não pode ficar de fora dessa.
+									Pagode hoje dia 30/04/2021 às 21h da noite no bar
+									Sensação Gelada!
+								</p>
+					</div>
+				</section>
+			</article>
+			<article class="homenoticias">
+			<article>
+				<a href="#"><img src="img/gelo.jpg" alt="gelo"></a>
+					<div class="homenoticiasinner">
+						 <a href="#">Depósito de Gelo</a>
+								<p>Enquanto muitos se mantém em quarentena, outros
+									 continuam desrespeitando o decreto municipal.
+									Ministério da Saúde irá acionar o poder público
+								para que sejam tomadas as devidas providências.
+								</p>
+					</div>
+				</section>
+			</article>
 		
-		$(".btn-menu").click(function(){
-			$(".menu").fadeIn(); 			
-		});
 		
-  		$(".btn-close").click(function(){
-  			$(".menu").fadeOut();
-  			
-  		});
-	</script>
-    	  
-    <main class="servicos">
-    	<article class="servico">
-	        <a href="#"><img src="img/gelo.jpg" alt="sacos de gelo escama"></a>
-	        <div class="inner">
-	        	<a href="#">Publicidade</a>
-	        		<h4>Depósito de Gelo</h4>
-	        			<p>Trabalhasssmos com gelo filtrado, escama, carvão e sal grosso.</p>
-	        </div>			
-	    </article>
-	<aside>
-	    <h2>Entre em contato</h2>
-	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	</aside>
- 	
- 	</main> 
-	
-	<footer>
-	    <p>Copyright 2015 Código Fonte©</p>
-	</footer>
-	
+	</main> 
+
+		 <!--Rodapé-->
+		    <footer class="rodape bg-gradient">
+				<div class="social-icons">
+					<a href="https://www.facebook.com/rhian.mello"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com/RhianMello"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.google.com/"><i class="fab fa-google"></i></a>
+					<a href="https://www.instagram.com/rhianmello_/"><i class="fab fa-instagram"></i></a>
+					<a href="mailto:rhian.udm@gmail.com"><i class="fa fa-envelope"></i></a>
+					<p class="copyright"><b>© Copyright 2021 Rhian Mello - Todos os direitos reservados.</b></p>
+				</div>
+			</footer>
+	 	<!--Jquery-->
+	 	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+	 		<script>
+				$(".btn-menu").click(function(){$(".menu").fadeIn();});
+				$(".btn-close").click(function(){$(".menu").fadeOut();});
+	 	</script>
 	</body>
 </html>
-
-
+	
+	
+	
