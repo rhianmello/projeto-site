@@ -207,6 +207,7 @@ img{max-width: 100%;}
 }
 @media screen and (min-width: 550px) {
     .homenoticias{margin-top: 10%;}
+    .section {min-width: 100%;}
 }
 @media screen and (min-width: 670px) {
     .homenoticias{width: 90%;margin-top: 0%;float:center;}
