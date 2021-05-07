@@ -103,7 +103,7 @@ img{max-width: 100%;}
     text-shadow:20px 20px 20px rgb(23, 20, 201);
 }
 .contador a{font-size: 2em;
-    color: red;
+    color: blue;
     text-align: center;
     cursor: none;
     font-style: comic;
@@ -113,7 +113,7 @@ img{max-width: 100%;}
     border-radius: 10px;
     max-width: 10%%;
 }
-.corvermelha{color: red;}
+
 /*noticias*/
 .container{
     width: 100%;
@@ -207,7 +207,7 @@ img{max-width: 100%;}
 }
 @media screen and (min-width: 550px) {
     .homenoticias{margin-top: 10%;}
-}
+    }
 @media screen and (min-width: 670px) {
     .section {width: 100%;}
     .homenoticias{width: 90%;margin-top: 0%;float:center;}
