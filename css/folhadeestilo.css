@@ -120,7 +120,7 @@ img{max-width: 100%;}
     margin-top: 0;
     
 }
-.section{width:100%}
+section{width:100%}
 .homenoticias{
     width: 90%;
     margin:auto;
@@ -210,7 +210,7 @@ img{max-width: 100%;}
     .homenoticias{margin-top: 10%;}
     }
 @media screen and (min-width: 670px) {
-    .section {width: 100%;}
+    
     .homenoticias{width: 90%;margin-top: 0%;float:center;}
     .homenoticiasinner{float:center;}
     .homenoticiasinner h4{padding-top: 5px;margin-right: 10%;}
