@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crie seu currículo profissional grátis. Gere um currículo moderno, organizado e pronto para baixar em PDF.">
+  <meta name="robots" content="index,follow">
+  <title>CurrículoPro — Gerador de Currículo Grátis</title>
+  <link rel="canonical" href="https://rhianmello.github.io/projeto-site/gerador-curriculo/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">C</span> CurrículoPro</div>
+    <a href="#como-funciona" class="top-link">Como funciona</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">GRÁTIS • RÁPIDO • PROFISSIONAL</span>
+        <h1>Seu próximo emprego começa com um bom currículo.</h1>
+        <p>Monte um currículo moderno em poucos minutos. Organize suas experiências, destaque suas competências e baixe uma versão pronta para enviar.</p>
+        <a class="cta" href="#gerador">Criar meu currículo grátis →</a>
+        <div class="trust"><span>✓ Sem cadastro</span><span>✓ Seus dados ficam no navegador</span><span>✓ PDF pronto para imprimir</span></div>
+      </div>
+      <div class="resume-preview" aria-label="Prévia de currículo">
+        <div class="paper-mini">
+          <div class="mini-head"><div class="mini-avatar"></div><div><b>SEU NOME</b><small>Profissional</small></div></div>
+          <div class="mini-line wide"></div><div class="mini-line"></div><div class="mini-line"></div>
+          <h4>EXPERIÊNCIA</h4><div class="mini-line wide"></div><div class="mini-line"></div><div class="mini-line"></div>
+          <h4>FORMAÇÃO</h4><div class="mini-line wide"></div><div class="mini-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gerador" class="builder-wrap">
+      <div class="builder-head"><div><span class="eyebrow">GERADOR</span><h2>Preencha seus dados</h2></div><div class="step">Etapa 1 de 1</div></div>
+      <div class="builder">
+        <form id="resumeForm">
+          <div class="section-title">Dados pessoais</div>
+          <div class="grid two"><label>Nome completo<input id="name" required placeholder="Ex.: João da Silva"></label><label>Cargo desejado<input id="role" placeholder="Ex.: Assistente Administrativo"></label></div>
+          <div class="grid three"><label>Cidade/UF<input id="location" placeholder="Rio de Janeiro - RJ"></label><label>Telefone<input id="phone" placeholder="(21) 99999-9999"></label><label>E-mail<input id="email" type="email" placeholder="voce@email.com"></label></div>
+
+          <div class="section-title">Resumo profissional</div>
+          <label><textarea id="summary" rows="4" placeholder="Conte brevemente quem você é, sua experiência e seu objetivo profissional."></textarea></label>
+          <button type="button" class="ai-btn" id="improveSummary">✦ Melhorar resumo com IA</button>
+
+          <div class="section-title">Experiência profissional</div>
+          <div id="experienceList"></div>
+          <button type="button" class="secondary" id="addExperience">+ Adicionar experiência</button>
+
+          <div class="section-title">Formação</div>
+          <div id="educationList"></div>
+          <button type="button" class="secondary" id="addEducation">+ Adicionar formação</button>
+
+          <div class="section-title">Competências</div>
+          <label><input id="skills" placeholder="Ex.: Excel, atendimento ao cliente, liderança, vendas"></label>
+
+          <div class="actions"><button type="submit" class="cta">Gerar meu currículo</button><button type="button" class="ghost" id="clearForm">Limpar</button></div>
+        </form>
+
+        <aside class="preview-panel">
+          <div class="preview-top"><span>Prévia</span><button id="downloadPdf" disabled>Baixar PDF</button></div>
+          <div id="resumePreview" class="resume-paper"><div class="empty-preview"><div>CV</div><p>Preencha seus dados e clique em<br><b>“Gerar meu currículo”</b>.</p></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="features"><h2>Feito para quem está procurando uma oportunidade</h2><div class="feature-grid"><article><b>01</b><h3>Preencha</h3><p>Informe seus dados, experiências, formação e competências.</p></article><article><b>02</b><h3>Melhore</h3><p>Use sugestões inteligentes para deixar seu texto mais profissional.</p></article><article><b>03</b><h3>Baixe</h3><p>Visualize o resultado e prepare seu currículo para enviar às empresas.</p></article></div></section>
+
+    <section class="seo-content"><h2>Como fazer um bom currículo?</h2><p>Um bom currículo deve ser claro, objetivo e adaptado ao tipo de vaga que você procura. Destaque experiências relevantes, resultados alcançados, formação e competências que tenham relação com o cargo.</p><div class="seo-links"><a href="#gerador">Currículo para primeiro emprego</a><a href="#gerador">Currículo sem experiência</a><a href="#gerador">Como escrever objetivo profissional</a><a href="#gerador">Como destacar experiência profissional</a></div></section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">C</span> CurrículoPro</div><p>Ferramenta independente para criação de currículos.</p><small>© 2026 CurrículoPro</small></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
