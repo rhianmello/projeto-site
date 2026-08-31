@@ -1,36 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Crie seu currículo profissional grátis, melhore textos, adicione sua foto e confira a compatibilidade com uma vaga.">
-<meta name="robots" content="index,follow"><meta name="theme-color" content="#3157d5">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="CurrículoPro: crie um currículo profissional grátis, ajuste sua foto, escolha um modelo e analise sua compatibilidade com vagas.">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#0d1b35">
 <link rel="canonical" href="https://rhianmello.github.io/projeto-site/gerador-curriculo/">
-<meta property="og:title" content="CurrículoPro — Gerador de Currículo Grátis"><meta property="og:description" content="Monte seu currículo, adicione sua foto, melhore seus textos e analise a compatibilidade com uma vaga.">
+<meta property="og:title" content="CurrículoPro — Gerador de Currículo Grátis"><meta property="og:description" content="Crie, personalize e baixe seu currículo profissional.">
 <title>CurrículoPro — Gerador de Currículo Grátis</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
 </head>
 <body>
-<header class="topbar"><div class="brand"><span class="brand-mark">C</span> CurrículoPro</div><nav><a href="#gerador" class="top-link">Criar currículo</a><a href="#analise" class="top-link">Analisar vaga</a></nav></header>
-<main>
-<section class="hero"><div class="hero-copy"><span class="eyebrow">GRÁTIS • RÁPIDO • PROFISSIONAL</span><h1>Um currículo melhor. Mais preparado para a vaga.</h1><p>Crie seu currículo em minutos, melhore suas descrições, adicione sua foto e descubra quais palavras-chave da vaga você ainda precisa destacar.</p><a class="cta" href="#gerador">Criar meu currículo grátis →</a><div class="trust"><span>✓ Sem cadastro</span><span>✓ Dados no seu navegador</span><span>✓ PDF em A4</span></div></div><div class="resume-preview"><div class="paper-mini"><div class="mini-head"><div class="mini-avatar"></div><div><b>SEU NOME</b><small>Profissional</small></div></div><div class="mini-line wide"></div><div class="mini-line"></div><div class="mini-line"></div><h4>EXPERIÊNCIA</h4><div class="mini-line wide"></div><div class="mini-line"></div><div class="mini-line"></div><h4>COMPETÊNCIAS</h4><div class="mini-line wide"></div></div></div></section>
-<section id="gerador" class="builder-wrap"><div class="builder-head"><div><span class="eyebrow">GERADOR</span><h2>Monte seu currículo</h2></div><div class="step">Salvamento automático no navegador</div></div>
-<div class="builder"><form id="resumeForm">
-<div class="section-title">Foto do currículo</div>
-<div class="photo-upload"><div class="photo-thumb" id="photoThumb"><span>Foto</span></div><div><label class="file-label" for="photoInput">+ Escolher foto</label><input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp"><p class="field-help">A foto será recortada em formato quadrado e aparecerá no canto direito do currículo.</p><button type="button" class="remove-photo" id="removePhoto">Remover foto</button></div></div>
-<div class="section-title">Dados pessoais</div><div class="grid two"><label>Nome completo<input id="name" required placeholder="Ex.: João da Silva"></label><label>Cargo desejado<input id="role" placeholder="Ex.: Assistente Administrativo"></label></div>
-<div class="grid three"><label>Cidade/UF<input id="location" placeholder="Rio de Janeiro - RJ"></label><label>Telefone<input id="phone" placeholder="(21) 99999-9999"></label><label>E-mail<input id="email" type="email" placeholder="voce@email.com"></label></div>
-<div class="section-title">Resumo profissional</div><label><textarea id="summary" rows="4" placeholder="Conte brevemente quem você é, sua experiência e seu objetivo profissional."></textarea></label><button type="button" class="ai-btn" id="improveSummary">✦ Melhorar texto</button>
-<div class="section-title">Experiência profissional</div><div id="experienceList"></div><button type="button" class="secondary" id="addExperience">+ Adicionar experiência</button>
-<div class="section-title">Formação</div><div id="educationList"></div><button type="button" class="secondary" id="addEducation">+ Adicionar formação</button>
-<div class="section-title">Competências</div><label><input id="skills" placeholder="Ex.: Excel, vendas, liderança, atendimento ao cliente"></label>
-<div class="actions"><button type="submit" class="cta">Gerar meu currículo</button><button type="button" class="ghost" id="clearForm">Limpar</button></div></form>
-<aside class="preview-panel"><div class="preview-top"><span>Prévia</span><button id="downloadPdf" disabled>Baixar PDF</button></div><div id="resumePreview" class="resume-paper"><div class="empty-preview"><div>CV</div><p>Preencha seus dados e clique em<br><b>“Gerar meu currículo”</b>.</p></div></div></aside></div></section>
-<section id="analise" class="analysis"><div class="analysis-head"><span class="eyebrow">NOVO</span><h2>Compare seu currículo com uma vaga</h2><p>Cole a descrição da vaga. O CurrículoPro identifica palavras-chave relevantes e mostra o que aparece ou não no seu currículo.</p></div><div class="analysis-box"><textarea id="jobDescription" rows="9" placeholder="Cole aqui a descrição da vaga..."></textarea><button class="cta" id="analyzeJob">Analisar compatibilidade</button><div id="analysisResult" class="analysis-result"></div></div></section>
-<section class="features"><h2>Feito para quem está procurando uma oportunidade</h2><div class="feature-grid"><article><b>01</b><h3>Crie</h3><p>Organize dados, experiências, formação, competências e foto em um currículo profissional.</p></article><article><b>02</b><h3>Melhore</h3><p>Use sugestões para deixar o resumo e as descrições mais objetivos e orientados a resultados.</p></article><article><b>03</b><h3>Adapte</h3><p>Compare seu currículo com a vaga e encontre palavras-chave que podem estar faltando.</p></article></div></section>
-<section class="seo-content"><h2>Currículo grátis para diferentes objetivos</h2><p>Um currículo eficiente deve ser claro, objetivo e adaptado ao cargo. Use o gerador para criar sua base e depois ajuste o conteúdo conforme cada oportunidade.</p><div class="seo-links"><a href="primeiro-emprego.html">Primeiro emprego</a><a href="curriculo-sem-experiencia.html">Sem experiência</a><a href="objetivo-profissional.html">Objetivo profissional</a><a href="curriculo-ats.html">Currículo e ATS</a><a href="curriculo-vendedor.html">Currículo de vendedor</a></div></section>
+<div class="app-shell">
+<aside class="sidebar">
+  <a class="brand" href="../"><span class="brand-mark">C</span><span>Currículo<span>Pro</span></span></a>
+  <nav class="side-nav" aria-label="Navegação do editor">
+    <a class="nav-item active" href="#dados"><span>♙</span> Dados Pessoais</a>
+    <a class="nav-item" href="#experiencia"><span>▣</span> Experiências</a>
+    <a class="nav-item" href="#formacao"><span>◇</span> Formação</a>
+    <a class="nav-item" href="#habilidades"><span>✣</span> Habilidades</a>
+    <a class="nav-item" href="#cursos"><span>▤</span> Cursos</a>
+    <a class="nav-item" href="#idiomas"><span>◎</span> Idiomas</a>
+    <a class="nav-item" href="#objetivo"><span>◇</span> Objetivo</a>
+    <a class="nav-item" href="#resumo"><span>▤</span> Resumo</a>
+    <a class="nav-item" href="#analise"><span>◉</span> Análise de Vaga</a>
+    <a class="nav-item" href="#modelos"><span>▥</span> Modelos</a>
+  </nav>
+  <div class="sidebar-bottom"><button id="downloadPdfSide" class="side-download">⇩ &nbsp; Download PDF</button><small>Seus dados ficam neste navegador.</small></div>
+</aside>
+
+<main class="workspace">
+<header class="mobile-top"><a class="brand" href="../"><span class="brand-mark">C</span><span>Currículo<span>Pro</span></span></a><button id="mobileMenu" aria-label="Abrir menu">☰</button></header>
+<div class="workspace-grid">
+<section class="editor-column">
+  <div class="editor-head"><a href="../" class="back">‹ &nbsp; Voltar</a><div><span class="eyebrow">CONSTRUTOR DE CURRÍCULO</span><h1>Monte seu currículo</h1><p>Preencha os dados e veja o resultado em tempo real.</p></div></div>
+  <form id="resumeForm">
+    <section id="dados" class="form-card"><div class="card-title"><div><span class="step-no">01</span><h2>Dados Pessoais</h2><p>Informações que aparecerão no cabeçalho do currículo.</p></div></div>
+      <div class="photo-box"><div class="photo-thumb" id="photoThumb"><span>Foto</span></div><div class="photo-copy"><strong>Foto profissional</strong><p>Use uma foto vertical, de preferência com boa iluminação.</p><div class="photo-actions"><label class="outline-btn" for="photoInput">＋ Escolher foto</label><input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp"><button type="button" class="text-danger" id="removePhoto">Remover</button></div></div></div>
+      <div class="grid two"><label>Nome completo<input id="name" required placeholder="Ex.: João da Silva"></label><label>Cargo desejado<input id="role" placeholder="Ex.: Assistente Administrativo"></label></div>
+      <div class="grid three"><label>Cidade / UF<input id="location" placeholder="Rio de Janeiro - RJ"></label><label>Telefone<input id="phone" placeholder="(21) 99999-9999"></label><label>E-mail<input id="email" type="email" placeholder="voce@email.com"></label></div>
+      <div class="grid two"><label>LinkedIn (opcional)<input id="linkedin" placeholder="linkedin.com/in/seunome"></label><label>Portfólio (opcional)<input id="portfolio" placeholder="seusite.com"></label></div>
+    </section>
+
+    <section id="objetivo" class="form-card"><div class="card-title"><span class="step-no">02</span><div><h2>Objetivo profissional</h2><p>Mostre de forma direta o que você busca.</p></div></div><textarea id="objective" rows="3" placeholder="Ex.: Busco oportunidade na área administrativa, contribuindo com organização, atendimento e controle de processos."></textarea></section>
+
+    <section id="resumo" class="form-card"><div class="card-title"><span class="step-no">03</span><div><h2>Resumo profissional</h2><p>Apresente sua experiência e seus principais diferenciais.</p></div></div><textarea id="summary" rows="5" placeholder="Conte brevemente quem você é, sua experiência e seus principais resultados."></textarea><button type="button" class="ai-btn" id="improveSummary">✦ Melhorar texto</button></section>
+
+    <section id="experiencia" class="form-card"><div class="card-title"><span class="step-no">04</span><div><h2>Experiência profissional</h2><p>Inclua suas experiências mais relevantes.</p></div></div><div id="experienceList"></div><button type="button" class="outline-btn" id="addExperience">＋ Adicionar experiência</button></section>
+
+    <section id="formacao" class="form-card"><div class="card-title"><span class="step-no">05</span><div><h2>Formação</h2><p>Graduação, técnico, ensino médio ou outras formações.</p></div></div><div id="educationList"></div><button type="button" class="outline-btn" id="addEducation">＋ Adicionar formação</button></section>
+
+    <section id="habilidades" class="form-card"><div class="card-title"><span class="step-no">06</span><div><h2>Habilidades</h2><p>Separe as competências por vírgulas.</p></div></div><input id="skills" placeholder="Ex.: Excel, liderança, vendas, atendimento ao cliente"></section>
+
+    <section id="cursos" class="form-card"><div class="card-title"><span class="step-no">07</span><div><h2>Cursos</h2><p>Certificações e cursos relevantes.</p></div></div><textarea id="courses" rows="3" placeholder="Ex.: Excel Avançado — Fundação Bradesco\nPower BI — Udemy"></textarea></section>
+
+    <section id="idiomas" class="form-card"><div class="card-title"><span class="step-no">08</span><div><h2>Idiomas</h2><p>Informe idioma e nível.</p></div></div><input id="languages" placeholder="Ex.: Inglês — Intermediário; Espanhol — Básico"></section>
+
+    <section id="modelos" class="form-card"><div class="card-title"><span class="step-no">09</span><div><h2>Modelo</h2><p>Escolha o estilo do seu currículo.</p></div></div><div class="template-grid"><button type="button" class="template active" data-template="modern"><div class="template-paper modern-mini"><b>SEU NOME</b><i></i><em></em><em></em></div><strong>Moderno</strong></button><button type="button" class="template" data-template="classic"><div class="template-paper classic-mini"><b>SEU NOME</b><i></i><em></em><em></em></div><strong>Clássico</strong></button><button type="button" class="template" data-template="minimal"><div class="template-paper minimal-mini"><b>SEU NOME</b><i></i><em></em><em></em></div><strong>Minimalista</strong></button><button type="button" class="template" data-template="executive"><div class="template-paper executive-mini"><b>SEU NOME</b><i></i><em></em><em></em></div><strong>Executivo</strong></button></div></section>
+
+    <section id="analise" class="form-card analysis-card"><div class="card-title"><span class="step-no">10</span><div><h2>Análise de Vaga</h2><p>Cole uma vaga para comparar palavras-chave com seu currículo.</p></div></div><textarea id="jobDescription" rows="7" placeholder="Cole aqui a descrição da vaga..."></textarea><button type="button" class="primary-btn full" id="analyzeJob">Analisar compatibilidade</button><div id="analysisResult" class="analysis-result"></div></section>
+    <div class="form-actions"><button type="submit" class="primary-btn">Gerar meu currículo</button><button type="button" class="ghost-btn" id="clearForm">Limpar dados</button></div>
+  </form>
+</section>
+
+<aside class="preview-column">
+  <div class="preview-toolbar"><div><strong>Prévia</strong><span class="autosave">● Salvo automaticamente</span></div><div class="toolbar-actions"><select id="templateSelect" aria-label="Escolher modelo"><option value="modern">Modelo Moderno</option><option value="classic">Modelo Clássico</option><option value="minimal">Modelo Minimalista</option><option value="executive">Modelo Executivo</option></select><button class="icon-btn" title="Visualização desktop">▣</button><button class="icon-btn" title="Visualização mobile">▯</button><button class="download-btn" id="downloadPdf" disabled>⇩ PDF</button></div></div>
+  <div class="preview-stage"><div id="resumePreview" class="resume-paper modern"><div class="empty-preview"><div>CV</div><p>Preencha seus dados e veja<br>seu currículo aqui.</p></div></div></div>
+  <div class="preview-note"><span>✓</span><div><strong>Foto e layout prontos para PDF</strong><small>A foto será corrigida para orientação vertical automaticamente.</small></div></div>
+</aside>
+</div>
 </main>
-<div class="crop-modal" id="cropModal" aria-hidden="true"><div class="crop-card"><div class="crop-header"><div><span class="eyebrow">EDITAR FOTO</span><h2>Recorte sua foto</h2></div><button type="button" class="crop-close" id="closeCrop">×</button></div><div class="crop-area"><img id="cropImage" alt="Foto para recorte"></div><p class="crop-help">Arraste a imagem e use o zoom para posicionar seu rosto no centro.</p><div class="crop-actions"><button type="button" class="ghost" id="cancelCrop">Cancelar</button><button type="button" class="cta" id="applyCrop">Usar esta foto</button></div></div></div>
-<footer><div class="brand"><span class="brand-mark">C</span> CurrículoPro</div><p>Ferramenta independente para criação de currículos.</p><small>© 2026 CurrículoPro</small></footer>
+</div>
+
+<div class="crop-modal" id="cropModal" aria-hidden="true"><div class="crop-card"><div class="crop-header"><div><span class="eyebrow">EDITAR FOTO</span><h2>Recorte sua foto</h2><p>Arraste a imagem e use o zoom para posicionar seu rosto.</p></div><button type="button" class="crop-close" id="closeCrop">×</button></div><div class="crop-area"><img id="cropImage" alt="Foto para recorte"></div><div class="crop-controls"><span>−</span><input id="zoomRange" type="range" min="0" max="100" value="25" aria-label="Zoom"><span>＋</span></div><div class="crop-actions"><button type="button" class="ghost-btn" id="cancelCrop">Cancelar</button><button type="button" class="primary-btn" id="applyCrop">Usar esta foto</button></div></div></div>
+<footer><strong>CurrículoPro</strong><span>Ferramenta independente para criação de currículos.</span><small>© 2026 CurrículoPro</small></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script><script src="app.js"></script>
 </body></html>
