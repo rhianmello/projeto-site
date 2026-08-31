@@ -8,7 +8,7 @@
 <meta property="og:title" content="CurrículoPro — Gerador de Currículo Grátis"><meta property="og:description" content="Crie, personalize e baixe seu currículo profissional.">
 <title>CurrículoPro — Gerador de Currículo Grátis</title>
 <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="extras.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.css">
 </head>
 <body>
 <div class="app-shell">
@@ -29,5 +29,8 @@
 <aside class="preview-column"><div class="preview-toolbar"><div><strong>Prévia</strong><span class="autosave">● Salvo automaticamente</span></div><div class="toolbar-actions"><select id="templateSelect" aria-label="Escolher modelo"><option value="modern">Modelo Moderno</option><option value="classic">Modelo Clássico</option><option value="minimal">Modelo Minimalista</option><option value="executive">Modelo Executivo</option></select><button class="icon-btn" title="Visualização desktop">▣</button><button class="icon-btn" title="Visualização mobile">▯</button><button class="download-btn" id="downloadPdf" disabled>⇩ PDF</button></div></div><div class="preview-stage"><div id="resumePreview" class="resume-paper modern"><div class="empty-preview"><div>CV</div><p>Preencha seus dados e veja<br>seu currículo aqui.</p></div></div></div><div class="preview-note"><span>✓</span><div><strong>Foto e layout prontos para PDF</strong><small>A foto será corrigida para orientação vertical automaticamente.</small></div></div></aside></div></main></div>
 <div class="crop-modal" id="cropModal" aria-hidden="true"><div class="crop-card"><div class="crop-header"><div><span class="eyebrow">EDITAR FOTO</span><h2>Recorte sua foto</h2><p>Arraste a imagem e use o zoom para posicionar seu rosto.</p></div><button type="button" class="crop-close" id="closeCrop">×</button></div><div class="crop-area"><img id="cropImage" alt="Foto para recorte"></div><div class="crop-controls"><span>−</span><input id="zoomRange" type="range" min="0" max="100" value="25" aria-label="Zoom"><span>＋</span></div><div class="crop-actions"><button type="button" class="ghost-btn" id="cancelCrop">Cancelar</button><button type="button" class="primary-btn" id="applyCrop">Usar esta foto</button></div></div></div>
 <footer><strong>CurrículoPro</strong><span>Ferramenta independente para criação de currículos.</span><small>© 2026 CurrículoPro</small></footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script><script src="app.js"></script><script src="extras.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cropperjs@1.6.2/dist/cropper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="app.js"></script><script src="extras.js"></script>
 </body></html>
