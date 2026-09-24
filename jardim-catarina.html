@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Jardim Catarina</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg1: #071a2f;
+      --bg2: #0b3a5f;
+      --card: rgba(255,255,255,.96);
+      --primary: #0d6efd;
+      --primary-dark: #084298;
+      --text: #162033;
+      --muted: #6c757d;
+      --border: #d9e1ea;
+    }
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(52,152,219,.28), transparent 35%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .page { width: 100%; max-width: 760px; }
+    .brand { color: #fff; text-align: center; margin-bottom: 22px; }
+    .brand .icon {
+      width: 62px; height: 62px; border-radius: 18px; margin: 0 auto 12px;
+      display: grid; place-items: center; background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.20); backdrop-filter: blur(8px);
+      font-size: 28px; box-shadow: 0 10px 30px rgba(0,0,0,.18);
+    }
+    .brand h1 { font-size: clamp(1.7rem, 5vw, 2.5rem); font-weight: 800; letter-spacing: -.5px; }
+    .brand p { margin-top: 7px; color: rgba(255,255,255,.78); font-size: .98rem; }
+    .card {
+      background: var(--card); border-radius: 24px; padding: 34px;
+      box-shadow: 0 22px 70px rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.55);
+    }
+    .card-header {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; margin-bottom: 28px;
+    }
+    .card-header h2 { font-size: 1.35rem; margin-bottom: 5px; }
+    .card-header span { color: var(--muted); font-size: .92rem; }
+    .badge {
+      white-space: nowrap; padding: 8px 12px; border-radius: 999px;
+      background: #e8f2ff; color: var(--primary-dark); font-size: .78rem;
+      font-weight: 700; border: 1px solid #cfe2ff;
+    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-weight: 700; font-size: .92rem; color: #263247; }
+    input {
+      width: 100%; border: 1px solid var(--border); background: #f9fbfd;
+      border-radius: 14px; padding: 14px 15px; outline: none;
+      font-size: 1rem; transition: .2s ease; color: var(--text);
+    }
+    input:focus {
+      border-color: var(--primary); background: #fff;
+      box-shadow: 0 0 0 4px rgba(13,110,253,.12);
+    }
+    .hint { color: var(--muted); font-size: .8rem; line-height: 1.4; }
+    .actions { display: flex; gap: 12px; margin-top: 28px; }
+    button {
+      border: 0; border-radius: 14px; padding: 14px 18px; cursor: pointer;
+      font-weight: 700; font-size: .95rem;
+      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+    button:hover { transform: translateY(-1px); }
+    .primary {
+      flex: 1; background: linear-gradient(135deg,#0d6efd,#0755c9);
+      color: #fff; box-shadow: 0 10px 24px rgba(13,110,253,.24);
+    }
+    .secondary { background: #eef2f7; color: #344054; }
+    .result {
+      display: none; margin-top: 24px; padding: 18px; border-radius: 16px;
+      background: #ecf8f1; border: 1px solid #c8ead8; color: #165c39;
+    }
+    .result strong { display: block; margin-bottom: 8px; font-size: 1rem; }
+    .footer {
+      text-align: center; color: rgba(255,255,255,.60);
+      font-size: .78rem; margin-top: 16px;
+    }
+    @media (max-width: 620px) {
+      .card { padding: 24px 18px; border-radius: 20px; }
+      .grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .card-header { align-items: flex-start; flex-direction: column; }
+      .actions { flex-direction: column; }
+      .secondary, .primary { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="brand">
+      <div class="icon">📋</div>
+      <h1>Cadastro de Morador</h1>
+      <p>Preencha os dados abaixo para realizar o cadastro.</p>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <div>
+          <h2>Dados de identificação</h2>
+          <span>Informe o nome e a matrícula.</span>
+        </div>
+        <div class="badge">Jardim Catarina</div>
+      </div>
+
+      <form id="cadastroForm">
+        <div class="grid">
+          <div class="field full">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" placeholder="Digite o nome completo" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="matricula">Matrícula</label>
+            <input id="matricula" name="matricula" type="text" placeholder="Ex.: 123456" inputmode="numeric" required />
+            <div class="hint">Digite a matrícula de identificação.</div>
+          </div>
+
+          <div class="field">
+            <label for="bairro">Bairro</label>
+            <input id="bairro" name="bairro" type="text" value="Jardim Catarina" required />
+            <div class="hint">O bairro já vem preenchido automaticamente.</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="secondary" id="limpar">Limpar</button>
+          <button type="submit" class="primary">Confirmar cadastro</button>
+        </div>
+      </form>
+
+      <div class="result" id="resultado">
+        <strong>Cadastro preenchido com sucesso!</strong>
+        <div id="resumo"></div>
+      </div>
+    </section>
+
+    <div class="footer">Página de cadastro • Jardim Catarina</div>
+  </main>
+
+  <script>
+    const form = document.getElementById("cadastroForm");
+    const nome = document.getElementById("nome");
+    const matricula = document.getElementById("matricula");
+    const bairro = document.getElementById("bairro");
+    const resultado = document.getElementById("resultado");
+    const resumo = document.getElementById("resumo");
+    const limpar = document.getElementById("limpar");
+
+    matricula.addEventListener("input", () => {
+      matricula.value = matricula.value.replace(/[^0-9A-Za-z.-]/g, "");
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      resumo.innerHTML =
+        "Nome: <b>" + escapeHTML(nome.value) + "</b><br>" +
+        "Matrícula: <b>" + escapeHTML(matricula.value) + "</b><br>" +
+        "Bairro: <b>" + escapeHTML(bairro.value) + "</b>";
+      resultado.style.display = "block";
+      resultado.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    limpar.addEventListener("click", () => {
+      form.reset();
+      bairro.value = "Jardim Catarina";
+      resultado.style.display = "none";
+      nome.focus();
+    });
+
+    function escapeHTML(texto) {
+      return texto.replace(/[&<>"']/g, caractere => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[caractere]));
+    }
+  </script>
+</body>
+</html>
