@@ -20,14 +20,18 @@ function translateText(node){
  if(node.parentElement.closest('script,style,#cp-support-backdrop,#cp-support-trigger,#localeControl,.cv-name,.cv-role,.cv-contact,.cv-item,.cv-skills,.cv-courses,.cv-languages,.optional-items,.analysis-result .keyword-columns p,.analysis-result .score span'))return;
  const raw=originalTexts.has(node)?originalTexts.get(node):node.nodeValue;
  if(!originalTexts.has(node))originalTexts.set(node,raw);
- const m=raw.match(/^(\s*[^A-Za-zÀ-ÿ]*)([\s\S]*?)(\s*)$/);
- if(!m)return;
- const key=m[2].trim();
- const translated=dictionaries[lang].get(key);
- if(translated!==undefined){
- const next=m[1]+translated+m[3];
- if(node.nodeValue!==next)node.nodeValue=next;
+ const trimmed=raw.trim();
+ let next=null;
+ const exact=dictionaries[lang].get(trimmed);
+ if(exact!==undefined)next=raw.replace(trimmed,exact);
+ else {
+  const match=trimmed.match(/^([^A-Za-zÀ-ÿ(]*)([\s\S]+)$/);
+  if(match){
+   const translated=dictionaries[lang].get(match[2].trim());
+   if(translated!==undefined)next=raw.replace(trimmed,match[1]+translated);
+  }
  }
+ if(next!==null&&node.nodeValue!==next)node.nodeValue=next;
 }
 function translateAttrs(el){
  if(el.closest('#cp-support-backdrop,#cp-support-trigger,#localeControl'))return;
