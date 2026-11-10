@@ -1,5 +1,6 @@
 (() => {
   const $ = id => document.getElementById(id);
+  const T = str => window.CPI18n?.t(str)||str;
   const KEY = 'curriculopro-extras';
   const fields = ['birthdate','maritalStatus','nationality','cnh','cnhCategory','travel','relocation','showExtras'];
   const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
@@ -11,17 +12,18 @@
     let box=$('optionalPreview'); if(box)box.remove();
     if(!$('showExtras')?.checked)return;
     const items=[]; const age=ageFromDate($('birthdate')?.value);
-    if(age)items.push('Idade: '+age+' anos');
-    if($('maritalStatus')?.value)items.push('Estado civil: '+$('maritalStatus').value);
-    if($('nationality')?.value)items.push('Nacionalidade: '+$('nationality').value);
-    if($('cnh')?.value){let x='CNH: '+$('cnh').value; if($('cnhCategory')?.value)x+=' — categoria '+$('cnhCategory').value; items.push(x);}
-    if($('travel')?.value)items.push('Disponibilidade para viagens: '+$('travel').value);
-    if($('relocation')?.value)items.push('Disponibilidade para mudança: '+$('relocation').value);
+    if(age)items.push(T('Idade')+': '+age+' '+T('anos'));
+    if($('maritalStatus')?.value)items.push(T('Estado civil')+': '+T($('maritalStatus').value));
+    if($('nationality')?.value)items.push(T('Nacionalidade')+': '+$('nationality').value);
+    if($('cnh')?.value){let x=T('CNH')+': '+T($('cnh').value); if($('cnhCategory')?.value)x+=' — '+T('categoria')+' '+$('cnhCategory').value; items.push(x);}
+    if($('travel')?.value)items.push(T('Disponibilidade para viagens')+': '+T($('travel').value));
+    if($('relocation')?.value)items.push(T('Disponibilidade para mudança')+': '+T($('relocation').value));
     if(!items.length)return;
-    box=document.createElement('div'); box.id='optionalPreview'; box.className='cv-section optional-section'; box.innerHTML='INFORMAÇÕES ADICIONAIS';
+    box=document.createElement('div'); box.id='optionalPreview'; box.className='cv-section optional-section'; box.textContent=T('INFORMAÇÕES ADICIONAIS');
     const content=document.createElement('div'); content.className='cv-skills optional-items'; content.textContent=items.join(' • '); box.appendChild(content); preview.appendChild(box);
   }
-  fields.forEach(id=>{const el=$(id);if(el){el.addEventListener('input',saveExtras);el.addEventListener('change',saveExtras);}});
+  window.renderExtras=renderExtras;
+  fields.forEach(id=>{const el=$(id);if(el){el.addEventListener('input',()=>{saveExtras();renderExtras()});el.addEventListener('change',()=>{saveExtras();renderExtras()});}});
   $('resumeForm')?.addEventListener('submit',()=>setTimeout(renderExtras,20));
   document.addEventListener('click',e=>{if(e.target.closest('#downloadPdf,#downloadPdfSide'))setTimeout(renderExtras,10);});
   setTimeout(renderExtras,100);
