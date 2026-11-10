@@ -18,5 +18,5 @@ let prior=null;function locale(){const code=new URLSearchParams(location.search)
 function update(){const v=t[locale()];trigger.textContent='♡ '+v[0];$('cp-support-title').textContent=v[1];$('cp-support-intro').textContent=v[2];$('cp-pix-label').textContent=v[3];$('cp-copy-pix').textContent=v[4];$('cp-usdt-label').textContent=v[5];$('cp-copy-usdt').textContent=v[6];$('cp-network').textContent=v[7];$('cp-close').textContent=v[9]}
 trigger.onclick=()=>{update();prior=document.activeElement;overlay.classList.add('open');$('cp-close').focus()};function close(){overlay.classList.remove('open');$('cp-toast').textContent='';prior?.focus?.()}$('cp-close').onclick=close;overlay.onclick=e=>{if(e.target===overlay)close()};document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))close()});
 async function copy(value){try{await navigator.clipboard.writeText(value)}catch{const input=document.createElement('textarea');input.value=value;document.body.appendChild(input);input.select();document.execCommand('copy');input.remove()}$('cp-toast').textContent=t[locale()][8]}
-$('cp-copy-pix').onclick=()=>copy(pix);$('cp-copy-usdt').onclick=()=>copy(usdt);update();
+$('cp-copy-pix').onclick=()=>copy(pix);$('cp-copy-usdt').onclick=()=>copy(usdt);document.addEventListener('curriculopro:languagechange',update);update();
 })();
